@@ -52,6 +52,10 @@ public class SwiftAppcenterFlutterPlugin: NSObject, FlutterPlugin {
                  Analytics.enabled = call.arguments as! Bool
              case "generateTestCrash":
                  Crashes.generateTestCrash()
+             case "enableManualSessionTracker":
+                 Analytics.enableManualSessionTracker()
+             case "startSession":
+                 Analytics.startSession()
              default:
                  result(FlutterMethodNotImplemented);
                  return

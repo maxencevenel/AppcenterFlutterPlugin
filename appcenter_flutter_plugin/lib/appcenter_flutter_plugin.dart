@@ -75,8 +75,19 @@ class AppCenter {
     await _methodChannel.invokeMethod('configureCrashes', enabled);
   }
 
+  /// Generate test crash
   static Future generateTestCrash() async {
     await _methodChannel.invokeMethod('generateTestCrash');
+  }
+
+  /// Enable manual session tracker
+  static Future enableManualSessionTracker() async {
+    await _methodChannel.invokeMethod('enableManualSessionTracker');
+  }
+
+  /// Start a new session if manual session tracker is enabled, otherwise do nothing
+  static Future startSession() async {
+    await _methodChannel.invokeMethod('startSession');
   }
 
   /// Track error

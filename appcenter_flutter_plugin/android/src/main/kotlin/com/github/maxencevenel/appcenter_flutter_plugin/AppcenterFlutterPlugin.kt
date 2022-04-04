@@ -87,6 +87,12 @@ class AppcenterFlutterPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
         "generateTestCrash" -> {
           Crashes.generateTestCrash()
         }
+        "enableManualSessionTracker" -> {
+          Analytics.enableManualSessionTracker();
+        }
+        "startSession" -> {
+          Analytics.startSession();
+        }
         "trackError" -> {
           val message = call.argument<String>("message")
           val properties = call.argument<Map<String, String>>("properties")
